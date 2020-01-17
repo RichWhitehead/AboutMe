@@ -24,7 +24,7 @@ if (questionOne.toLowerCase() === 'yes') {
   alert('Please try again!');
 }
 
-var questionTwo = prompt('Do Richard have three daughters?');
+var questionTwo = prompt('Does Richard have three daughters?');
 
 if (questionTwo.toLowerCase() === 'yes') {
   alert('That is correct!');
