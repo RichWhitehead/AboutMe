@@ -4,7 +4,7 @@ console.log('Quiz');
 
 var enterName = prompt('Hello! What is your name?');
 
-var userWantsToReadBio = prompt('Hi ' + enterName + ', Ready to read Bio and take a short quiz?');
+var userWantsToReadBio = prompt('Thank you! ' + enterName + ', Ready to read Bio and take a short quiz?');
 
 if (userWantsToReadBio.toLowerCase() === 'yes') {
   alert('Awesome, Lets Start');
