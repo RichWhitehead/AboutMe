@@ -1,4 +1,5 @@
 'use strict';
+var score = 0;
 
 console.log('Quiz');
 
@@ -94,17 +95,21 @@ for(var i = 0; i < 6; i++){
 
   if(questionSeven === shoes[0]){
     alert('You are correct!');
+    alert(score++);
     break;
 
   }else if(questionSeven === shoes[1]){
     alert('Yes you are correct!');
+    alert(score++);
     break;
 
   } else if(questionSeven === shoes[2]){
     alert('Correct!');
+    alert(score++);
     break;
   } else if(questionSeven === shoes[3]){
     alert('Good Job, Correct!');
+    alert(score++);
     break;
   }
   else (questionSix !== shoes);
@@ -112,3 +117,4 @@ for(var i = 0; i < 6; i++){
 }
 
 alert('The correct answer is' + Nike);
+alert(score);
