@@ -62,3 +62,53 @@ if (questionFive.toLowerCase() === 'yes') {
   alert('Please try again!');
 }
 
+
+for(var i = 0; i < 4; i++){
+  var questionSix = prompt ('Guess a number 1 - 10');
+  var guess = '7';
+  if (questionSix === guess){
+    alert('You are correct!');
+
+    break;
+
+  } else if (questionSix < guess) {
+    alert('Too High!');
+
+  } else if (questionSix > guess) {
+    alert('Too Low!');
+  } else {
+    alert('Someting went wrong!');
+  }
+
+}
+
+if(questionSix !=7) {
+  alert('The correct answer 7');
+}
+
+
+
+for(var i = 0; i < 6; i++){
+  var questionSeven = prompt('What are the best shoes for running?');
+  var shoes = ['Nike','Adidas','Reebok','Brooks',];
+
+  if(questionSeven === shoes[0]){
+    alert('You are correct!');
+    break;
+
+  }else if(questionSeven === shoes[1]){
+    alert('Yes you are correct!');
+    break;
+
+  } else if(questionSeven === shoes[2]){
+    alert('Correct!');
+    break;
+  } else if(questionSeven === shoes[3]){
+    alert('Good Job, Correct!');
+    break;
+  }
+  else (questionSix !== shoes);
+  alert('Try again!');
+}
+
+alert('The correct answer is' + Nike);
