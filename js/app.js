@@ -1,147 +1,139 @@
 'use strict';
 var score = 0;
 
-console.log('Quiz');
-var enterN = prompt('Hello! What is your name?');
+alert('Hello! What is your name?');
 
 // will be prompted to enter name
 
-function enterName(){
-}
-
-enterName();
-console.log ('userentername');
-
-var userWantsToReadBio = prompt('Thank you! ' + enterN + ', Ready to read Bio and take a short quiz?');
-console.log('userreadsbio');
-
-if (userWantsToReadBio.toLowerCase() === 'yes') {
-  alert('Awesome, Lets Start');
-} else if (userWantsToReadBio === 'no') {
-  alert('Please exit');
-} else {
-  alert('Something went wrong! Try again');
+function readBio() {
+  var userWantsToReadBio = prompt('Thank you! Ready to read Bio and take a short quiz?');
+  if (userWantsToReadBio.toLowerCase() === 'yes') {
+    alert('Awesome, Lets Start');
+  } else if (userWantsToReadBio === 'no') {
+    alert('Please exit');
+  } else {
+    alert('Something went wrong! Try again');
+  }
 }
 // start of questions
 
-var questO = prompt('Did Richard join the Army in 1997?');
-
 function questionOne() {
-  console.log('question');
-
+  var questO = prompt('Did Richard join the Army in 1997?');
+  if (questO.toLowerCase() === 'yes') {
+    alert('That is correct!');
+  } else if (questO === 'no') {
+    alert('Incorrect! Try again');
+  } else {
+    alert('Please try again!');
+  }
 }
-
-questO();
-
-if (questionOne.toLowerCase() === 'yes') {
-  alert('That is correct!');
-} else if (questionOne === 'no') {
-  alert('Incorrect! Try again');
-} else {
-  alert('Please try again!');
-}
-
-var questT = prompt('Does Richard have three daughters?');
 
 function questionTwo() {
-  console.log('question');
-
-}
-
-questT();
-
-if (questionTwo.toLowerCase() === 'yes') {
-  alert('That is correct!');
-} else if (questionTwo === 'no') {
-  alert('Incorrect! Try again');
-} else {
-  alert('Please try again!');
-}
-
-var questionThree = prompt('Is Richard married?');
-
-if (questionThree.toLowerCase() === 'yes') {
-  alert('That is correct!');
-} else if (questionThree === 'no') {
-  alert('Incorrect! Try again');
-} else {
-  alert('Please try again!');
-}
-var questionFour = prompt('Does Richard only have one son?');
-
-if (questionFour.toLowerCase() === 'yes') {
-  alert('That is correct!');
-} else if (questionFour === 'no') {
-  alert('Incorrect! Try again');
-} else {
-  alert('Please try again!');
-}
-var questionFive = prompt('Was Richard commissioned as a Officer?');
-
-if (questionFive.toLowerCase() === 'yes') {
-  alert('That is correct!');
-} else if (questionFive === 'no') {
-  alert('Incorrect! Try again');
-} else {
-  alert('Please try again!');
-}
-
-
-for (var i = 0; i < 4; i++){
-  var questionSix = prompt ('Guess a number 1 - 10');
-  var guess = '7';
-  if (questionSix === guess){
-    alert('You are correct!');
-
-    break;
-
-  } else if (questionSix < guess) {
-    alert('Too High!');
-
-  } else if (questionSix > guess) {
-    alert('Too Low!');
+  var questT = prompt('Does Richard have three daughters?');
+  if (questT.toLowerCase() === 'yes') {
+    alert('That is correct!');
+  } else if (questT === 'no') {
+    alert('Incorrect! Try again');
   } else {
-    alert('Someting went wrong!');
+    alert('Please try again!');
   }
-
 }
 
-// eslint-disable-next-line eqeqeq
-if(questionSix !=7) {
-  alert('The correct answer 7');
-}
-
-
-
-// eslint-disable-next-line no-redeclare
-for(var i = 0; i < 6; i++){
-  var questionSeven = prompt('What are the best shoes for running?');
-  var shoes = ['Nike','Adidas','Reebok','Brooks',];
-
-  if(questionSeven === shoes[0]){
-    alert('You are correct!');
-    alert(score++);
-    break;
-
-  }else if(questionSeven === shoes[1]){
-    alert('Yes you are correct!');
-    alert(score++);
-    break;
-
-  } else if(questionSeven === shoes[2]){
-    alert('Correct!');
-    alert(score++);
-    break;
-
-  } else if(questionSeven === shoes[3]){
-    alert('Good Job, Correct!');
-    alert(score++);
-    break;
+function questionThree() {
+  var questThree = prompt('Is Richard married?');
+  if (questThree.toLowerCase() === 'yes') {
+    alert('That is correct!');
+  } else if (questThree === 'no') {
+    alert('Incorrect! Try again');
+  } else {
+    alert('Please try again!');
   }
-  else (questionSix !== shoes);
-  alert('Try again!');
 }
 
-// eslint-disable-next-line no-undef
-alert('The correct answer is' + Nike);
+function questionFour() {
+  var questFour = prompt('Does Richard only have one son?');
+  if (questFour.toLowerCase() === 'yes') {
+    alert('That is correct!');
+  } else if (questFour === 'no') {
+    alert('Incorrect! Try again');
+  } else {
+    alert('Please try again!');
+  }
+}
+
+function questionFive() {
+  var questFive = prompt('Was Richard commissioned as a Officer?');
+
+  if (questFive.toLowerCase() === 'yes') {
+    alert('That is correct!');
+  } else if (questFive === 'no') {
+    alert('Incorrect! Try again');
+  } else {
+    alert('Please try again!');
+  }
+}
+
+readBio();
+questionOne();
+questionTwo();
+questionThree();
+questionFour();
+questionFive();
+
+function questionSix() {
+  var questSix = prompt('Guess a number 1 - 10');
+
+  var guess = '7';
+  for (var i = 0; i < 4; i++) {
+    if (questSix === guess) {
+      alert('You are correct!');
+
+      break;
+
+    } else if (questSix < guess) {
+      alert('Too High!');
+
+    } else if (questSix > guess) {
+      alert('Too Low!');
+    } else {
+      alert('Someting went wrong!');
+    }
+
+  }
+}
+
+function questionSeven() {
+  var questSeven = prompt('What are the best shoes for running?');
+  var shoes = ['Nike', 'Adidas', 'Reebok', 'Brooks',];
+
+  for (var i = 0; i < 6; i++) {
+
+    if (questSeven === shoes[0]) {
+      alert('You are correct!');
+      alert(score++);
+      break;
+
+    } else if (questSeven === shoes[1]) {
+      alert('Yes you are correct!');
+      alert(score++);
+      break;
+
+    } else if (questSeven === shoes[2]) {
+      alert('Correct!');
+      alert(score++);
+      break;
+
+    } else if (questSeven === shoes[3]) {
+      alert('Good Job, Correct!');
+      alert(score++);
+      break;
+    }
+    else (questSeven !== shoes);
+    alert('Try again!');
+  }
+}
+
 alert(score);
+
+questionSix();
+questionSeven();
