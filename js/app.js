@@ -2,20 +2,36 @@
 var score = 0;
 
 console.log('Quiz');
+var enterN = prompt('Hello! What is your name?');
 
-var enterName = prompt('Hello! What is your name?');
+// will be prompted to enter name
 
-var userWantsToReadBio = prompt('Thank you! ' + enterName + ', Ready to read Bio and take a short quiz?');
+function enterName(){
+}
+
+enterName();
+console.log ('userentername');
+
+var userWantsToReadBio = prompt('Thank you! ' + enterN + ', Ready to read Bio and take a short quiz?');
+console.log('userreadsbio');
 
 if (userWantsToReadBio.toLowerCase() === 'yes') {
   alert('Awesome, Lets Start');
 } else if (userWantsToReadBio === 'no') {
-  alert('Please exit the Bio');
+  alert('Please exit');
 } else {
   alert('Something went wrong! Try again');
 }
+// start of questions
 
-var questionOne = prompt('Did Richard join the Army in 1997?');
+var questO = prompt('Did Richard join the Army in 1997?');
+
+function questionOne() {
+  console.log('question');
+
+}
+
+questO();
 
 if (questionOne.toLowerCase() === 'yes') {
   alert('That is correct!');
@@ -25,7 +41,14 @@ if (questionOne.toLowerCase() === 'yes') {
   alert('Please try again!');
 }
 
-var questionTwo = prompt('Does Richard have three daughters?');
+var questT = prompt('Does Richard have three daughters?');
+
+function questionTwo() {
+  console.log('question');
+
+}
+
+questT();
 
 if (questionTwo.toLowerCase() === 'yes') {
   alert('That is correct!');
@@ -64,7 +87,7 @@ if (questionFive.toLowerCase() === 'yes') {
 }
 
 
-for(var i = 0; i < 4; i++){
+for (var i = 0; i < 4; i++){
   var questionSix = prompt ('Guess a number 1 - 10');
   var guess = '7';
   if (questionSix === guess){
@@ -83,12 +106,14 @@ for(var i = 0; i < 4; i++){
 
 }
 
+// eslint-disable-next-line eqeqeq
 if(questionSix !=7) {
   alert('The correct answer 7');
 }
 
 
 
+// eslint-disable-next-line no-redeclare
 for(var i = 0; i < 6; i++){
   var questionSeven = prompt('What are the best shoes for running?');
   var shoes = ['Nike','Adidas','Reebok','Brooks',];
@@ -107,6 +132,7 @@ for(var i = 0; i < 6; i++){
     alert('Correct!');
     alert(score++);
     break;
+
   } else if(questionSeven === shoes[3]){
     alert('Good Job, Correct!');
     alert(score++);
@@ -116,5 +142,6 @@ for(var i = 0; i < 6; i++){
   alert('Try again!');
 }
 
+// eslint-disable-next-line no-undef
 alert('The correct answer is' + Nike);
 alert(score);
